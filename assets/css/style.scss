@@ -1,0 +1,96 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+$baslik_font: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+$baslik_color: #daa520;
+$font: "Roboto Mono", monospace;
+$output_color: #f5f5f5;
+$bg_color: #353638;
+$beyaz: #ffffff;
+$input_color: #e2e2e2;
+
+body {
+    height: 100vh;
+    background: #44a08d;
+    background: -webkit-linear-gradient(to top, #093637, #44a08d); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #093637, #44a08d);
+
+    .wrapper {
+        margin-top: 25%;
+        position: relative;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+
+        h1 {
+            text-align: center;
+            color: $baslik_color;
+            margin-bottom: 50px;
+            font-family: $baslik_font;
+        }
+
+        .box {
+            background-color: $bg_color;
+            position: relative;
+            padding: 50px 20px;
+            border-radius: 10px;
+            -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+
+            #output {
+                background-color: transparent;
+                border: none;
+                border-bottom: 2px solid #e2e2e2;
+                width: 70%;
+                height: 35px;
+                font-family: $font;
+                color: $output_color;
+            }
+
+            button {
+                float: right;
+                margin-left: 5px;
+            }
+
+            input[type="range"] {
+                width: 85%;
+                height: 3.5px;
+                margin-top: 80px;
+                -webkit-appearance: none;
+                background-color: $input_color;
+                border-radius: 3px;
+            }
+
+            input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                background-color: yellowgreen;
+            }
+
+            #length-val {
+                font-family: $font;
+                font-weight: 600;
+                width: 10%;
+                padding: 5px 0;
+                text-align: center;
+                display: inline-block;
+                font-size: 16px;
+                color: $bg_color;
+                background-color: $beyaz;
+                margin-left: 3%;
+                border-radius: 3px;
+            }
+        }
+    }
+}
